@@ -31,12 +31,15 @@ while getopts "m:s:h" opt; do
         ;;
         h) 
         echo "Usage: $0 -m <int> -s <int> "
+        exit 0
         ;;
         \?)
         echo "Please check usage by typing $0 -h"
+        exit 1
         ;;
         *)
-        echo not valid ;;
+        echo not valid 
+        exit 1 ;;
     esac
 done
 
@@ -52,3 +55,5 @@ while [[ $seconds_total -gt 0 ]]; do
 done
 
 echo "Time's Up"
+
+exit 0
