@@ -20,14 +20,14 @@ while getopts "m:s:h" opt; do
             echo "minutes (-m) must be greater or equal to zero"
             exit 1
         fi
-        seconds_total=$(( ($OPTARG * 60) + $seconds_total ))
+        seconds_total=$(( (OPTARG * 60) + seconds_total ))
         ;;
         s)
         if [[ -n $OPTARG && $OPTARG -lt 0 ]]; then
             echo "seconds (-s) must be greater or equal to zero"
             exit 1
         fi
-        seconds_total=$(( $OPTARG + $seconds_total ))
+        seconds_total=$(( OPTARG + seconds_total ))
         ;;
         h) 
         echo "Usage: $0 -m <int> -s <int> "
@@ -50,7 +50,7 @@ fi
 
 while [[ $seconds_total -gt 0 ]]; do
     echo "$seconds_total seconds remaining..."
-    let seconds_total=$seconds_total-1
+    ((--seconds_total))
     sleep 1
 done
 
