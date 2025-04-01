@@ -2,14 +2,14 @@
 
 # Author: Uzezi Jephter Oghenekaro
 # Created At: 31/03/2025
-# Last Updated: 31/03/2025
+# Last Updated: 01/04/2025
 
 # Description
 # This script shows a timer countdown in seconds on screen to the user,
 # begining from what the user specified.
 
 # Usage
-# timer_countdown -m 20 -s 5
+# timer_countdown.sh -m 20 -s 5
 # where -m is the number of minutes and -s is number of seconds
 
 seconds_total=0

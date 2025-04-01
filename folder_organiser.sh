@@ -8,7 +8,7 @@
 # This script help users to organise files in a specific folder
 
 # Usage
-# folder_organiser
+# folder_organiser.sh
 
 read -rp "which folder do you want to organise its contents ?: " folder
 

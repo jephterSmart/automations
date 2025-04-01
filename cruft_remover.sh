@@ -8,7 +8,7 @@
 # This script help users to remove unused files from a specified folder
 
 # Usage
-# cruft_remover
+# cruft_remover.sh
 
 
 
