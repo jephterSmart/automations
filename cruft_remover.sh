@@ -26,7 +26,7 @@ if [ "${days:-0}" -le 0 ]; then
     exit 1
 fi
 
-readarray -t found_files < <(find "$folder" -mtime "$days" -type f -maxdepth 1)
+readarray -t found_files < <(find "$folder" -mtime "+$days" -type f -maxdepth 1)
 
 if [ ${#found_files[@]} -gt 0 ]; then
     echo "${#found_files[@]} files where found."
